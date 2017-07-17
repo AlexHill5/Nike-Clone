@@ -1,0 +1,17 @@
+.Container {
+    display: flex;
+    justify-content: space-between;
+}
+.logo  {
+    height: 50px;
+    padding: 40px;
+}
+
+.menu {
+    height: 30px;
+    padding: 40px;
+}
+.cart {
+    height: 25px;
+    padding: 42px;
+}
