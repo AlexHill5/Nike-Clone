@@ -1,0 +1,32 @@
+
+.detailed-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+    margin-top: 15%;
+}
+
+.selected-shoe{
+    background: blue;
+    height: 200px;
+    width: 200px;
+    
+
+}
+.test{
+    padding: 10px;
+}
+.button-test{
+    margin: 10px;
+    height: 30px;
+    width: 100px;
+}
+
+.addcart{
+    height: 30px;
+    width: 150px;
+    margin-left: 100px;
+    margin-top: 10px;
+    
+}

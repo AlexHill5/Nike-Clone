@@ -1,0 +1,41 @@
+
+body{
+
+    background: #F5F5F5;
+}
+
+.ad-container{
+    padding-top: 50px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+
+
+}
+.women-container{
+    height: 50%;
+    width: 100%;
+    padding-top: 30px;
+    position: relative;
+}
+.woman-ad{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50%;
+    width: 100%;
+}
+.women-button{
+    z-index: 100;
+  position: absolute;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  right: 150px;
+  top: 350px;
+}

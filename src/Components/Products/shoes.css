@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: #F5F5F5;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: baseline;
+}
+
+.shoes {
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    
+    
+    
+}
+
+.shoeImg:hover {
+  border: solid 2px lightgray;
+  margin: -2px;
+}
+
+.shoeImg{
+    height: 75%;
+    width: 75%;
+}

@@ -3,13 +3,16 @@ import {Switch, Route} from 'react-router-dom'
 
 
 import Home from './Components/Home/LandingPage';
-// import About from "./Components/About/About";
+import MenShoes from './Components/Products/MenShoes'
+import DetailedProduct from './Components/Products/DetailedProduct/DetailedProduct'
+
 
 export default (
     <Switch>
         <Route component={ Home } path='/' exact/>
-        {/*<Route component={ MenShoes } path='/Men-Shoes'/>
-        <Route component={ WomenShoes } path='/Women-Shoes'/>
+        <Route component={ MenShoes } path='/MenShoes'/>
+        <Route component={ DetailedProduct} path='/MShoes/Detailed/:id'/>
+        {/*<Route component={ WomenShoes } path='/Women-Shoes'/>
         <Route component={ About } path='/about'/>*/}
     </Switch>
 )
