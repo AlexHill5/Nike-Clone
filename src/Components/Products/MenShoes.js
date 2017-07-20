@@ -15,7 +15,7 @@ class MenShoes extends Component {
         }
     }
     componentDidMount() {
-        const results = axios.get(`http://localhost:4000/MenShoes`)
+        const results = axios.get(`/MenShoes`)
             .then(res => res.data)
             .then((finalResult) => {
                 this.setState({
@@ -29,7 +29,7 @@ class MenShoes extends Component {
 
             const MenShoes = this.state.shoes
             .map((shoes, i) => {
-                return <ShoeStyling
+                return <ShoeStyling 
                             image = {shoes.img}
                             name = {shoes.shoename}
                             price = {shoes.price}
@@ -38,7 +38,7 @@ class MenShoes extends Component {
             }) 
             return ( 
                 <div className = "main">
-                     { MenShoes }
+                     { MenShoes } 
                 </div>
             );
         }

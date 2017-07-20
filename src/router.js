@@ -11,7 +11,7 @@ export default (
     <Switch>
         <Route component={ Home } path='/' exact/>
         <Route component={ MenShoes } path='/MenShoes'/>
-        <Route component={ DetailedProduct} path='/MShoes/Detailed/:id'/>
+        <Route component={ DetailedProduct} path='/MShoes/:id'/>
         {/*<Route component={ WomenShoes } path='/Women-Shoes'/>
         <Route component={ About } path='/about'/>*/}
     </Switch>

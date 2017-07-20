@@ -5,7 +5,7 @@ class MainShoes extends Component {
     render() {
         return (
             <div className="ad-container">
-                     <h1> GEAR UP FOR SPORT </h1>
+                     <h1 className='motto'> GEAR UP FOR SPORT </h1>
                 <div className='women-container'> 
                     <img className="women-ad" src={require("./women-ad.jpg")} />
                     <button className="women-button"> BUY WOMEN SHOES HERE </button>

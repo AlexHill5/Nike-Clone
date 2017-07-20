@@ -5,7 +5,7 @@ class ShoeStyling extends Component {
     render() {
         return (
           
-               <Link to={`localhost:3000/MShoes/detailed/${this.props.id}`}> <div className="shoes">
+               <Link to={`MShoes/${this.props.id}`}> <div className="shoes">
                 <img  className="shoeImg"src={this.props.image}/>
                 <p>{this.props.name} </p>
                 <p>${this.props.price}</p>

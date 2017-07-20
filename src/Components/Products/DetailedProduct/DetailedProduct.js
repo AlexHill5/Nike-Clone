@@ -6,15 +6,15 @@ class DetailedProduct extends Component {
     constructor(){
         super();
         this.state={
-            shoe: []
+            shoe: {}
         }
     }
       componentDidMount() {
-        const results = axios.get(`http://localhost:4000/MenShoes`)
+        const results = axios.get(`/ShoeId/${this.props.match.params.id}`)
             .then(res => res.data)
             .then((finalResult) => {
                 this.setState({
-                    shoe: finalResult
+                    shoe: finalResult[0]
                 });
                 console.log(this.state)
             });
@@ -22,11 +22,12 @@ class DetailedProduct extends Component {
     render() {
         return (
             <div className='detailed-container'>
-                <div className='selected-shoe'>
-                    IMAGE
-                </div>
+                <img className='selected-shoe' src={this.state.shoe.img } />
+                
+                    
                 <div className='name-size'>
-                    <div className='test'>SHOE NAME HERE </div>
+                    <h1 className='shoename'>{this.state.shoe.shoename}</h1>
+                    <h1 className="shoeprice"> ${this.state.shoe.price} </h1>
                     <div className='sizeSet1'>
                         <button className='button-test'> Size: 8 </button>
                         <button className='button-test'> Size: 9 </button>

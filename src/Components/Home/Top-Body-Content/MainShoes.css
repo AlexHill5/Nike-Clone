@@ -17,6 +17,10 @@ body{
 
 
 }
+.motto{
+    font-weight: bold;
+    font-size: 30px;
+}
 .women-container{
     height: 50%;
     width: 100%;

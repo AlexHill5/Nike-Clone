@@ -4,18 +4,28 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .selected-shoe{
-    background: blue;
-    height: 200px;
-    width: 200px;
-    
+    height: 500px;
+    width: 500px;
+    border: 1px solid color;
 
 }
-.test{
+.shoename{
     padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+   padding-top: 150px;
+}
+.shoeprice{
+    border-width: 2px;
+   border-bottom: 2px lightgray solid;
+   font-weight: bold;
+   padding:10px;
+
+
 }
 .button-test{
     margin: 10px;
