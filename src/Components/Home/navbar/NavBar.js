@@ -17,7 +17,7 @@ class NavBar extends Component {
     <ul>
       <li className="dir"><a href="#">Men</a>
         <ul>
-          <li><a href="/MenShoes">Shoes</a></li>
+          <li><Link to="/MenShoes">Shoes</Link></li>
           <li><a href="#">Clothing</a></li>
           <li><a href="#">Accessories</a></li>
 
@@ -50,7 +50,7 @@ class NavBar extends Component {
 </ul>
 </nav>
               <Link to="/" >  <img className="logo" src={require("./Nike-logo.png")}/> </Link>
-               <div> <img className="cart" src={require("./shopping-cart.png")}/> <a href="http://localhost:4000/auth"> <button className="cart"> </button></a>  </div>
+              <Link to='/Cart'><img className="cart" src={require("./shopping-cart.png")}/> </Link>
             </div>
         );
     }

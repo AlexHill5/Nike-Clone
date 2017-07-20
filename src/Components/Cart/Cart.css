@@ -1,0 +1,25 @@
+
+.detailed-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+    margin-top: 5%;
+}
+
+.cart-container{
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+
+}
+
+.cartdetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 79px;
+    widows: 300px;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray
+}

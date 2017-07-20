@@ -6,7 +6,7 @@ const massive = require('massive')
 const Auth0Strategy = require('passport-auth0');
 const passport = require('passport');
 const cors = require('cors')
-const products_controller = require('./Products-Controller/Products-Controller')
+const products_controller = require('./controllers/Products-Controller')
 const secrets = require('./secrets.js')
 
 
@@ -36,7 +36,7 @@ passport.use(new Auth0Strategy({    //this needs to be copied EXACTLY the same c
    domain:       secrets.auth0.domain,
    clientID:     secrets.auth0.clientID,
    clientSecret: secrets.auth0.clientSecret,
-   callbackURL:  secrets.auth0.callbackUrl
+   callbackURL:  secrets.auth0.callbackURL
   },  
   //set up to here and then go to the Auth0 site and create a new app/client
   //all three of the domian file,client secret and other stuff from Auth0 goes into config.js
