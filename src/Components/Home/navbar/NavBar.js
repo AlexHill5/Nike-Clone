@@ -42,6 +42,7 @@ class NavBar extends Component {
           <li><a href="#">Shoes</a></li>
           <li><a href="#">Clothing</a></li>
           <li><a href="#">Accessories</a></li>
+          <li><a href="http://localhost:4000/auth">Login</a></li>
         </ul>
       </li>
     </ul>

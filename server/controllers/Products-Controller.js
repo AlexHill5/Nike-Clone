@@ -7,23 +7,6 @@ module.exports = {
       .catch( () => res.status(500).send() );
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
     getId: ( req, res, next ) => {
     const dbInstance = req.app.get('db');

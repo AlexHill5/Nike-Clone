@@ -7,6 +7,7 @@ const Auth0Strategy = require('passport-auth0');
 const passport = require('passport');
 const cors = require('cors')
 const products_controller = require('./controllers/Products-Controller')
+const cart_controller = require('./controllers/Cart-Controller')
 const secrets = require('./secrets.js')
 
 
@@ -21,8 +22,6 @@ app.use(cors({
 massive( secrets ).then( dbInstance => {
     app.set('db' , dbInstance);
 
-app.get('/MenShoes', products_controller.getAll) 
-app.get('/ShoeId/:id', products_controller.getId)
 
 app.use(session({
   resave: true, 
@@ -82,7 +81,14 @@ app.get('/auth/logout', function(req, res) {
   res.redirect('/');
 })
 
-} );
+// Get
+app.get('/MenShoes', products_controller.getAll) 
+app.get('/ShoeId/:id', products_controller.getId)
+
+
+// post
+app.post('/addtocart', cart_controller.addtocart);
+
 
 const port = 4000;
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );

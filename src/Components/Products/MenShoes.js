@@ -13,6 +13,8 @@ class MenShoes extends Component {
         this.state = {
             shoes: [],
         }
+
+      
     }
     componentDidMount() {
         const results = axios.get(`/MenShoes`)
@@ -25,6 +27,7 @@ class MenShoes extends Component {
             });
     }
 
+
     render(){
 
             const MenShoes = this.state.shoes
@@ -34,7 +37,8 @@ class MenShoes extends Component {
                             name = {shoes.shoename}
                             price = {shoes.price}
                             id = {shoes.id}
-                            key={shoes.id}/>                
+                            key={shoes.id}
+                            />                
             }) 
             return ( 
                 <div className = "main">

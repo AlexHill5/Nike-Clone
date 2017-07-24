@@ -23,14 +23,12 @@ body{
 }
 .women-container{
     height: 50%;
-    width: 100%;
+    width: 100vw;
     padding-top: 30px;
     position: relative;
 }
 .woman-ad{
     position: absolute;
-    left: 0;
-    top: 0;
     height: 50%;
     width: 100%;
 }
