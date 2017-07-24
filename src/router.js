@@ -14,7 +14,6 @@ export default (
         <Route component={ MenShoes } path='/MenShoes'/>
         <Route component={ DetailedProduct} path='/MShoes/:id'/>
         <Route component={ Cart } path='/Cart'/>
-        {/*<Route component={ WomenShoes } path='/Women-Shoes'/>
-        <Route component={ About } path='/about'/>*/}
+        {/*<Route component={ WomenShoes } path='/Women-Shoes'/>*/}
     </Switch>
 )

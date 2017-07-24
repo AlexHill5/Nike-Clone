@@ -43,21 +43,10 @@ passport.use(new Auth0Strategy({    //this needs to be copied EXACTLY the same c
     function(accessToken, refreshToken, extraParams, profile, done) {
       console.log('someone tried to access', profile);
 
+      
+
 
 //logic for passing in new or existing account
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -78,7 +67,7 @@ passport.deserializeUser(function(user, done) {
 });
 
 //these are the endppints, this first one kicks off the auth session
-app.get('/auth', passport.authenticate('auth0'));
+app.get('/auth' , passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0', 
 
