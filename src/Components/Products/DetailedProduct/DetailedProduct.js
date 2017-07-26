@@ -25,11 +25,14 @@ class DetailedProduct extends Component {
     addToCart(){
         // Make a POST req to your server, passing in the data.
         let config = {
-            shoeName: this.state.shoe.shoename,
-            shoeImage: this.state.shoe.img,
-            shoePrice: this.state.shoe.price
+        shoeid: this.state.shoe.id,
+        shoeName: this.state.shoe.shoename,
+        shoeimg: this.state.shoe.img,
+        shoeprice: this.state.shoe.price
         }
-        axios.post('/addtocart', config).then()
+        axios.post('http://localhost:4000/addtocart', config)
+        .then( (config) => config)
+        .catch( (err) => err);
        
     }
 

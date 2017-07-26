@@ -11,6 +11,7 @@
     height: 400px;
     width: 300px;
     border: 2px solid black;
+    background: #191919;
 
 }
 
@@ -21,5 +22,13 @@
     height: 79px;
     widows: 300px;
     flex-direction: column;
-    border-bottom: 1px solid lightgray
+    border-bottom: 1px solid lightgray;
+    color: white
+}
+.checkout {
+    border: none;
+    background: gray;
+    height: 50px;
+    width: 200px;
+    color: white;
 }

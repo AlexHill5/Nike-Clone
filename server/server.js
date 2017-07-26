@@ -12,16 +12,12 @@ const secrets = require('./secrets.js')
 
 
 
-const app = express();
+const app = module.exports = express();
 
 app.use( bodyParser.json() );
 app.use(cors({
     origin : 'http://localhost:3000'
 }))
-
-massive( secrets ).then( dbInstance => {
-    app.set('db' , dbInstance);
-
 
 app.use(session({
   resave: true, 
@@ -31,21 +27,26 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(new Auth0Strategy({    //this needs to be copied EXACTLY the same caps and all
-   domain:       secrets.auth0.domain,
-   clientID:     secrets.auth0.clientID,
-   clientSecret: secrets.auth0.clientSecret,
-   callbackURL:  secrets.auth0.callbackURL
-  },  
-  //set up to here and then go to the Auth0 site and create a new app/client
-  //all three of the domian file,client secret and other stuff from Auth0 goes into config.js
-    function(accessToken, refreshToken, extraParams, profile, done) {
-      console.log('someone tried to access', profile);
+massive( secrets ).then( dbInstance => {
+    app.set('db' , dbInstance);
 
-      
+    dbInstance.set_schema().then( () => console.log('Tables successfully reset')).catch(err => console.log(err));
+
+    passport.use(new Auth0Strategy({    //this needs to be copied EXACTLY the same caps and all
+      domain:       secrets.auth0.domain,
+      clientID:     secrets.auth0.clientID,
+      clientSecret: secrets.auth0.clientSecret,
+      callbackURL:  secrets.auth0.callbackURL
+      },  
+      //set up to here and then go to the Auth0 site and create a new app/client
+      //all three of the domian file,client secret and other stuff from Auth0 goes into config.js
+        function(accessToken, refreshToken, extraParams, profile, done) {
+          console.log('someone tried to access', profile);
+
+          
 
 
-//logic for passing in new or existing account
+    //logic for passing in new or existing account
 
 
 
@@ -83,12 +84,14 @@ app.get('/auth/logout', function(req, res) {
 
 // Get
 app.get('/MenShoes', products_controller.getAll) 
-app.get('/ShoeId/:id', products_controller.getId)
+app.get('/ShoeId/:id', products_controller.getId) 
+app.get('/cart', cart_controller.getCart)
+app.get('/getsum', cart_controller.getSum)
 
 
 // post
 app.post('/addtocart', cart_controller.addtocart);
 
-
+})
 const port = 4000;
-app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
+app.listen( port, () => { console.log(`Server listening on port ${port}.`); } )
