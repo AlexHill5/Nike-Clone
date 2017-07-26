@@ -10,6 +10,7 @@ class Cart extends Component {
             cart: [],
             salesTax: null
         }
+        this.checkout = this.checkout.bind(this)
     }
 
         componentDidMount() {
@@ -23,10 +24,17 @@ class Cart extends Component {
             });
     }
 
+    checkout(){
+        this.setState({
+            cart: '1'
+        })
+        console.log("CHECKOUT", this.state)
+    }
+
  
 
 
-    render() {
+render() {
 
 
         return (
@@ -36,8 +44,8 @@ class Cart extends Component {
                     <div className="cartdetails"><h1> CART </h1></div>
                     <div className="cartdetails"><h1> SUBTOTAL = ${this.state.cart.sum} </h1></div>
                     <div className="cartdetails"><h1> TAX = ${parseInt(this.state.cart.sum) * (10/100)} </h1></div>
-                    <div className="cartdetails"><h1> {`TOTAL = $ ${parseInt(this.state.cart.sum) * (10 / 100) + parseInt(this.state.cart.sum)}`} </h1></div>
-                    <div className="cartdetails"><button className="checkout"> CHECKOUT HERE </button></div>
+                    <div className="cartdetails"><h1> {`TOTAL = $ ${parseInt(this.state.cart.sum) * .08 + parseInt(this.state.cart.sum)}`} </h1></div>
+                    <div className="cartdetails"><button className="checkout" onClick={this.checkout}> CHECKOUT HERE </button></div>
                 </div>
 
             </div>

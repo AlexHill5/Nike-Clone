@@ -92,6 +92,9 @@ app.get('/getsum', cart_controller.getSum)
 // post
 app.post('/addtocart', cart_controller.addtocart);
 
+//delete
+app.delete('/checkout', cart_controller.checkout)
+
 })
 const port = 4000;
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } )

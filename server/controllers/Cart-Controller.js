@@ -30,6 +30,14 @@ module.exports = {
      dbInstance.read_sum()
       .then( sum => res.status(200).send( sum ) )
       .catch( () => res.status(500).send() );
-}
+},
+
+    checkout: (req, res, next) => {
+        const dbInstance = req.app.get('db');
+
+        dbInstance.checkout()
+        .then( () => res.status(200).send('Checkout Completed!') )
+        .catch( () => res.status(500).send() );
+    }
 } 
 
