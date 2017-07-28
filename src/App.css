@@ -25,6 +25,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: "Helvetica W02 Bold", Helvetica, Arial, sans-serif;
+	
 }
 ol, ul {
 	list-style: none;
@@ -44,4 +46,8 @@ table {
 .app{
 	height: 100%;
 	width: 100%;
+}
+
+*{
+	font-family: "Helvetica W02 Bold", Helvetica, Arial, sans-serif;
 }

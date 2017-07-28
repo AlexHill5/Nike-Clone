@@ -94,6 +94,12 @@ app.post('/addtocart', cart_controller.addtocart);
 
 //delete
 app.delete('/checkout', cart_controller.checkout)
+app.delete('/removeFromCart/:id',  (req, res, next) => {
+    dbInstance.remove_from_cart(req.params.id)
+    console.log(req.params.id)
+    res.status(200).send('something was removed from the cart')
+
+  })
 
 })
 const port = 4000;
