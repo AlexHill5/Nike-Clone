@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: "Helvetica W02 Bold", Helvetica, Arial, sans-serif;
+	background: white !important;
 	
 }
 ol, ul {

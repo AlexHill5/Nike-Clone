@@ -1,0 +1,46 @@
+
+.detailed-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+    margin-top: 5%;
+}
+
+.selected-shoe{
+    height: 500px;
+    width: 500px;
+    border: 1px solid color;
+
+}
+.shoename{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+   padding-top: 150px;
+}
+.shoeprice{
+    border-width: 2px;
+   border-bottom: 2px lightgray solid;
+   font-weight: bold;
+   padding:10px;
+
+
+}
+.button-test{
+    margin: 10px;
+    height: 30px;
+    width: 100px;
+}
+
+.name-size {
+    padding-left: 5px;
+}
+
+.addcart{
+    height: 30px;
+    width: 150px;
+    margin-top: 10px;
+    border: none;
+    
+}

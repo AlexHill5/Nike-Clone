@@ -3,8 +3,10 @@ import {Switch, Route} from 'react-router-dom'
 
 
 import Home from './Components/Home/LandingPage';
-import MenShoes from './Components/Products/MenShoes'
-import DetailedProduct from './Components/Products/DetailedProduct/DetailedProduct'
+import MenShoes from './Components/Mens/Products/MenShoes'
+import MensClothing from './Components/Mens/Clothing/MensClothing'
+import DetailedProduct from './Components/Mens/Products/DetailedProduct/DetailedProduct'
+import ClothingDetail from './Components/Mens/Clothing/ClothingDetail'
 import Cart from './Components/Cart/Cart'
 
 
@@ -13,7 +15,8 @@ export default (
         <Route component={ Home } path='/' exact/>
         <Route component={ MenShoes } path='/MenShoes'/>
         <Route component={ DetailedProduct} path='/MShoes/:id'/>
+        <Route component={ ClothingDetail } path='/MClothing/:id'/>
         <Route component={ Cart } path='/Cart'/>
-        {/*<Route component={ WomenShoes } path='/Women-Shoes'/>*/}
+        <Route component={ MensClothing } path='/MenClothing'/>
     </Switch>
 )

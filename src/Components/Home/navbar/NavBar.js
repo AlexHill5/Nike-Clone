@@ -18,7 +18,7 @@ class NavBar extends Component {
       <li className="dir"><a href="#">Men</a>
         <ul>
           <li><Link to="/MenShoes">Shoes</Link></li>
-          <li><a href="#">Clothing</a></li>
+          <li><Link to='/MenClothing'>Clothing</Link></li>
           <li><a href="#">Accessories</a></li>
 
         </ul>

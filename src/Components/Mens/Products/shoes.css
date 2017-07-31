@@ -6,6 +6,13 @@ body{
     width: 100%;
     background: #F5F5F5;
 }
+.shoes-header{
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .main{
     display: flex;
     flex-direction: row;
@@ -20,9 +27,9 @@ body{
     height: 200px;
     width: 200px;
     padding: 10px;
-    
-    
-    
+}
+.price {
+    padding-top: 5px;
 }
 
 .shoeImg:hover {
@@ -33,4 +40,14 @@ body{
 .shoeImg{
     height: 75%;
     width: 75%;
+}
+
+.shoe-price-container{
+    border-top: solid 2px lightgray;
+    width: 75%;
+}
+
+.shoe-name{
+    font-weight: bold;
+    font-size: 20px;
 }

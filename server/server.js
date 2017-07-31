@@ -85,8 +85,10 @@ app.get('/auth/logout', function(req, res) {
 // Get
 app.get('/MenShoes', products_controller.getAll) 
 app.get('/ShoeId/:id', products_controller.getId) 
+app.get('/Clothingid/:id', products_controller.clothingId)
 app.get('/cart', cart_controller.getCart)
 app.get('/getsum', cart_controller.getSum)
+app.get('/menclothing', products_controller.getClothing)
 
 
 // post
@@ -98,8 +100,8 @@ app.delete('/removeFromCart/:id',  (req, res, next) => {
     dbInstance.remove_from_cart(req.params.id)
     console.log(req.params.id)
     res.status(200).send('something was removed from the cart')
+})
 
-  })
 
 })
 const port = 4000;

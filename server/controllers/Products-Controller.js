@@ -18,4 +18,23 @@ module.exports = {
 
       .catch( (err) => res.status(500).send(err) );
   },
+
+    clothingId: ( req, res, next ) => {
+    const dbInstance = req.app.get('db');
+     dbInstance.read_clothing(req.params.id)
+      .then( products => {
+        console.log(products)
+          res.status(200).send( products ) })
+
+      .catch( (err) => res.status(500).send(err) );
+    },
+
+    getClothing: ( req, res, next ) => {
+    const dbInstance = req.app.get('db');
+    
+
+     dbInstance.read_clothing()
+      .then( products => res.status(200).send( products ) )
+      .catch( () => res.status(500).send() );
+  }
 };

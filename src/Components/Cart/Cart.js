@@ -95,9 +95,9 @@ render() {
                 </div>
         
                 <div className='cart-container'>
-                    <div className="cartdetails"><h1> CART </h1></div>
+                    <div className="cartdetails"><h1> CART </h1></div> 
                     <div className="cartdetails"><h1> SUBTOTAL = ${this.state.cart.sum} </h1></div>
-                    <div className="cartdetails"><h1> TAX = ${parseInt(this.state.cart.sum) * (10/100)} </h1></div>
+                    <div className="cartdetails"><h1> TAX = ${parseInt(this.state.cart.sum) * .08} </h1></div>
                     <div className="cartdetails"><h1> {`TOTAL = $${parseInt(this.state.cart.sum) * .08 + parseInt(this.state.cart.sum)}`} </h1></div>                    
                     <div className="cartdetails"><button className="checkout" onClick={this.checkout}> CHECKOUT HERE </button></div>
                 </div>

@@ -6,7 +6,7 @@ class DetailedProduct extends Component {
     constructor(){
         super();
         this.state={
-            shoe: {}
+            shoe: {},
         }
           this.addToCart = this.addToCart.bind(this)
     }
@@ -40,6 +40,7 @@ class DetailedProduct extends Component {
     
     render() {
         return (
+            
             <div className='detailed-container'>
                 <img className='selected-shoe' src={this.state.shoe.img } />
                 
@@ -47,21 +48,12 @@ class DetailedProduct extends Component {
                 <div className='name-size'>
                     <h1 className='shoename'>{this.state.shoe.shoename}</h1>
                     <h1 className="shoeprice"> ${this.state.shoe.price} </h1>
-                    <div className='sizeSet1'>
-                        <button className='button-test'> Size: 8 </button>
-                        <button className='button-test'> Size: 9 </button>
-                        <button className='button-test'> Size: 10 </button>
-                    </div>
-                    <div className='sizeSet2'>
-                        <button className='button-test'> Size: 11 </button>
-                        <button className='button-test'> Size: 12 </button>
-                        <button className='button-test'> Size: 13 </button>
-                    </div>
                     <button className='addcart' onClick={this.addToCart}>
                         ADD TO CART
                     </button>
                 </div>
             </div>
+
         );
     }
 }

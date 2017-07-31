@@ -41,8 +41,11 @@ class MenShoes extends Component {
                             />                
             }) 
             return ( 
+                <div>
+                    <h1 className='shoes-header'> MEN'S SHOES </h1>
                 <div className = "main">
                      { MenShoes } 
+                </div>
                 </div>
             );
         }
